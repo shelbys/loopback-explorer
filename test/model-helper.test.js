@@ -141,7 +141,7 @@ describe('model-helper', function() {
     });
 
     it('converts model field `description`', function() {
-      var def = buildSwaggerModels({}, { description: 'a-description' });
+      var def = buildSwaggerModels({ a: {} }, { description: 'a-description' });
       expect(def).to.have.property('description', 'a-description');
     });
   });
@@ -233,7 +233,7 @@ describe('model-helper', function() {
       model.definition = {
         name: 'test',
         description: ['1', '2', '3'],
-        properties: {}
+        properties: { a: {} }
       };
       var models = {};
       modelHelper.generateModelDefinition(model, models);

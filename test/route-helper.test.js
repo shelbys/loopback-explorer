@@ -207,8 +207,7 @@ describe('route-helper', function() {
     expect(doc.operations[0].responseMessages).to.eql([
       {
         code: 204,
-        message: 'Request was successful',
-        responseModel: 'void'
+        message: 'Request was successful'
       }
     ]);
   });
